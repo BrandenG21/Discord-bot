@@ -117,4 +117,4 @@ async def on_message(message):
                                    (starter_encouragements))
 
 # Run the client on the server
-client.run('ODA1MTkxMDY3ODk2Nzc0NjU3.YBXSng.MBQwYTUIZFeT8snholEImM6rSYo')
+client.run('')
