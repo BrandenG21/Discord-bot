@@ -94,6 +94,29 @@ def get_quote():
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
+# Bot start up Hello
+@client.event
+async def on_ready():
+     # Do Stuff 
+        general_channel = client.get_channel(805178301748346912)
+        await general_channel.send(':v: Whats up cuties!')
+
+@client.event
+async def on_disconnect():
+        general_channel = client.get_channel(805178301748346912)
+        await general_channel.send('Muah goodbye cutie!')
+
+
+# Version response
+@client.event
+async def on_message(message):
+    
+    if message.content == 'what is the version':
+        general_channel = client.get_channel(805178301748346912)
+        await general_channel.send('The version is 1.0!')
+
+
+#
 @client.event
 async def on_message(message):
     if message.author == client.user:
