@@ -98,12 +98,13 @@ async def on_ready():
 @client.event
 async def on_ready():
      # Do Stuff 
-        general_channel = client.get_channel(805178301748346912)
+     
+        general_channel = client.get_channel()
         await general_channel.send(':v: Whats up cuties!')
 
 @client.event
 async def on_disconnect():
-        general_channel = client.get_channel(805178301748346912)
+        general_channel = client.get_channel()
         await general_channel.send('Muah goodbye cutie!')
 
 
@@ -112,8 +113,15 @@ async def on_disconnect():
 async def on_message(message):
     
     if message.content == 'what is the version':
-        general_channel = client.get_channel(805178301748346912)
-        await general_channel.send('The version is 1.0!')
+        general_channel = client.get_channel()
+        
+        embedVar = discord.Embed(title="current Version", description="The bot is Version on 1.0", color=0x00ff00)
+        embedVar.add_field(name="Version Code", value="v1.0.0", inline=False)
+        embedVar.add_field(name="Date Released", value="February 17th, 2021", inline=False)
+        embedVar.set_footer(text="This is a sample footer")
+        embedVar.set_author(name="Branden G")
+        
+        await general_channel.send(embed=embedVar)
 
 
 #
@@ -145,4 +153,4 @@ async def on_message(message):
                                    (starter_encouragements))
 
 # Run the client on the server
-client.run('ODA1MTkxMDY3ODk2Nzc0NjU3.YBXSng.MBQwYTUIZFeT8snholEImM6rSYo')
+client.run('')
