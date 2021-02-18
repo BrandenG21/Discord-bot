@@ -1,2 +1,2 @@
 # Discord-bot
-2/5/21 - Update fixed interlaping responses
+A nice little discord bot i've coded up to mess with
